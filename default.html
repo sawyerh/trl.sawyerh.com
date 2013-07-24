@@ -16,7 +16,7 @@
     {% for post in site.posts %}
       videos.push({
         url: "{{post.permalink}}",
-        {% if post.meta.youtube_id %}youtube: "{{post.meta.youtube_id}}"{% else if post.meta.vimeo_id %}vimeo: "{{post.meta.vimeo_id}}"{% endif %}
+        {% if post.meta.youtube_id and post.meta.youtube_id.value != empty %}youtube: "{{post.meta.youtube_id}}"{% else if post.meta.vimeo_id %}vimeo: "{{post.meta.vimeo_id}}"{% endif %}
       });
     {% endfor %}
   </script>
