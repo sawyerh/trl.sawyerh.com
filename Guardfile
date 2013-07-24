@@ -1,10 +1,10 @@
 # Compile SASS
-guard 'sass', :input => 'css', :output => '_/css', :smart_partials => true, :style => :compressed
+guard 'sass', :input => 'assets/css', :output => 'assets/_/css', :smart_partials => true, :style => :compressed
 
 # Compile Coffeescript
-guard 'coffeescript', :input => 'coffee', :output => 'js'
+guard 'coffeescript', :input => 'assets/coffee', :output => 'assets/js'
 
 # Compress JS
-guard :jammit, :output_folder => "_/js/min/" do
-  watch(%r{^js/(.*)\.js$})
+guard :jammit, :output_folder => "assets/_/js/" do
+  watch(%r{^assets/js/(.*)\.js$})
 end

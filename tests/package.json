@@ -1,0 +1,8 @@
+{
+  "name": "fe_testing",
+  "version": "0.0.1",
+  "devDependencies":{
+    "chai": "*",
+    "mocha": "*"
+  }
+}
