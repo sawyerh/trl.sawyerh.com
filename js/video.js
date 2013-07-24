@@ -1,5 +1,6 @@
 var Video = (function() {
   "use strict";
+  var muted = false;
   var videoId;
   var player;
   var provider;
@@ -24,6 +25,10 @@ var Video = (function() {
       embed();
     },
 
+    toggleMute: function(){
+      setVolume();
+    },
+
     destroy: function(){
       if(provider == 'youtube'){
         player.destroy();
@@ -43,6 +48,26 @@ var Video = (function() {
     } else if (provider == 'vimeo'){
       createVimeo();
     }
+  }
+
+  function setVolume(){
+    if(!muted){
+      // MUTE
+      if(provider == 'youtube'){
+        player.setVolume(0)
+      } else {
+        post('setVolume', '0');
+      }
+    } else {
+      // UNMUTE
+      if(provider == 'youtube'){
+        player.setVolume(100)
+      } else {
+        post('setVolume', '1');
+      }
+    }
+
+    muted = !muted;
   }
 
 
@@ -128,7 +153,7 @@ var Video = (function() {
     switch (data.event) {
       case 'ready':
         post('addEventListener', 'finish');
-        post('setVolume', 1);
+        post('setVolume', '1');
         break;
 
       case 'finish':
