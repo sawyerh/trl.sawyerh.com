@@ -56,7 +56,9 @@ var Video = (function() {
         "showinfo": 0, // hide title and uploader name
         "color": "white",
         "rel": 0,
-        "autoplay": 1
+        "autoplay": 1,
+        "iv_load_policy": 3,
+        "controls": 0
       },
       events: {
         "onReady": youtubeReady,
@@ -119,7 +121,7 @@ var Video = (function() {
     switch (data.event) {
       case 'ready':
         post('addEventListener', 'finish');
-        post('setVolume', 0);
+        post('setVolume', 1);
         break;
 
       case 'finish':
