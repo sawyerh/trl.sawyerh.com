@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{site.title}} | {{title}}</title>
+  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+  <link rel="stylesheet" type="text/css" href="_/css/style.css" />
+</head>
+<body>
+  <div id="player" class="is-loading player"></div>
+
+  <script>
+    var videos = [];
+    {% for post in site.posts %}
+      videos.push({
+        url: "{{post.permalink}}",
+        {% if post.meta.youtube_id %}youtube: "{{post.meta.youtube_id}}"{% else if post.meta.vimeo_id %}vimeo: "{{post.meta.vimeo_id}}"{% endif %}
+      });
+    {% endfor %}
+  </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//www.youtube.com/iframe_api"></script>
+  <script src="_/js/min/application.js"></script>
+</body>
+</html>
