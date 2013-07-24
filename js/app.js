@@ -1,73 +1,70 @@
-var App = (function() {
-  "use strict";
-  var currentVideoIndex;
-  var currentVideo;
-  var videos;
- 
-  // This is the public interface of the Module.
-  var Module = {
-    init: function(options) {
-      videos = shuffleArray(options.videos);
-      console.log(videos);
+(function() {
+  window.App = (function() {
+    var attachEvents, createVideo, currentVideo, currentVideoIndex, muted, nextVideo, shuffleArray, videoEnded;
+
+    muted = false;
+
+    currentVideo = null;
+
+    currentVideoIndex = null;
+
+    function App(videos) {
+      this.videos = shuffleArray(videos);
       createVideo(0);
       attachEvents();
     }
-  }
-  
-  // private functions below this line
-  function attachEvents(){
-    $(window).on('videoEnded', function(){
-      videoEnded();
-    });
 
-    $("#js-mute").on('click', function(){
-      currentVideo.toggleMute();
-      this.classList.toggle('is-muted');
-    });
-  }
-    
-  function createVideo(i){
-    console.log(videos[i]);
-    // console.log('createVideo(' + i + ')');
-    
-    if(currentVideo){
-      currentVideo.destroy();
-    }
+    attachEvents = function() {
+      $(window).on("videoEnded", function() {
+        return videoEnded();
+      });
+      return $("#js-mute").on("click", function() {
+        currentVideo.toggleMute();
+        muted = !muted;
+        return this.classList.toggle("is-muted");
+      });
+    };
 
-    currentVideo = Object.create(Video);
-    currentVideo.init({
-      video: videos[i]
-    });
+    createVideo = function(i) {
+      console.log(videos[i]);
+      if (currentVideo) {
+        currentVideo.destroy();
+      }
+      currentVideo = new Video(videos[i], muted);
+      return currentVideoIndex = i;
+    };
 
-    currentVideoIndex = i;
-  }
+    nextVideo = function() {
+      return createVideo(currentVideoIndex + 1);
+    };
 
+    videoEnded = function() {
+      if (currentVideoIndex === videos.length - 1) {
+        return createVideo(0);
+      } else {
+        return nextVideo();
+      }
+    };
 
-  function nextVideo(){
-    createVideo(currentVideoIndex + 1);
-  }
+    shuffleArray = function(arr) {
+      var i, j, len, temp;
+      i = void 0;
+      temp = void 0;
+      j = void 0;
+      len = arr.length;
+      i = 0;
+      while (i < len) {
+        j = ~~(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++;
+      }
+      return arr;
+    };
 
+    return App;
 
-  function videoEnded(){
-    // Advance to next video
-    if(currentVideoIndex == videos.length - 1){
-      createVideo(0);
-    } else {
-      nextVideo();
-    }
-  }
+  })();
 
-  function shuffleArray(arr) {
-    var i, temp, j, len = arr.length;
-    for (i = 0; i < len; i++) {
-      j = ~~(Math.random() * (i + 1));
-      temp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp;
-    }
-    return arr;
-  }
-
-
-  return Module;
-}());
+}).call(this);

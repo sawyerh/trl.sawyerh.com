@@ -1,10 +1,8 @@
-var app;
+(function() {
+  window.onYouTubeIframeAPIReady = function() {
+    var app;
+    app = new App(videos);
+    return console.log('onYouTubeIframeAPIReady');
+  };
 
-function onYouTubeIframeAPIReady(){
-  app = Object.create(App);
-  console.log('onYouTubeIframeAPIReady');
-
-  app.init({
-    videos: videos
-  });
-}
+}).call(this);
