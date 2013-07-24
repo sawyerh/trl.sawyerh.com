@@ -10,6 +10,7 @@ var Video = (function() {
   // ************************************
 
   var Module = {
+
     init: function(options) {
       // Set video info
       if(options.video.youtube){
@@ -21,6 +22,12 @@ var Video = (function() {
       }
 
       embed();
+    },
+
+    destroy: function(){
+      if(provider == 'youtube'){
+        player.destroy();
+      }
     }
   }
   

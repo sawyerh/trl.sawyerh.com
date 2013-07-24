@@ -23,6 +23,11 @@ var App = (function() {
   function createVideo(i){
     console.log(videos[i]);
     // console.log('createVideo(' + i + ')');
+    
+    if(currentVideo){
+      currentVideo.destroy;
+    }
+
     currentVideo = Object.create(Video);
     currentVideo.init({
       video: videos[i]
