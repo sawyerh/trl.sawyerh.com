@@ -4,7 +4,7 @@
   window.Video = (function() {
     var muted, permalink, player, playerElement, provider, videoId;
 
-    muted = false;
+    muted = null;
 
     videoId = null;
 
@@ -49,6 +49,12 @@
         return this.createYoutube();
       } else if (provider === "vimeo") {
         return this.createVimeo();
+      }
+    };
+
+    Video.prototype.updateURL = function() {
+      if (window.history && window.history.pushState) {
+        return window.history.pushState({}, document.title, this.video.url);
       }
     };
 

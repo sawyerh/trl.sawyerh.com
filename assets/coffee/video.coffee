@@ -1,5 +1,5 @@
 class window.Video
-  muted = false
+  muted = null
   videoId = null
   player = null
   provider = null
@@ -19,6 +19,7 @@ class window.Video
       provider = "vimeo"
 
     @embed()
+    # @updateURL()
 
 
   toggleMute: ->
@@ -38,6 +39,11 @@ class window.Video
       @createYoutube()
     else if provider is "vimeo"
       @createVimeo()
+
+
+  updateURL: ->
+    if window.history && window.history.pushState
+      window.history.pushState({}, document.title, @video.url)
 
 
   setVolume: =>
