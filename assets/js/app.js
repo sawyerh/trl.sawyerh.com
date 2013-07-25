@@ -9,12 +9,24 @@
     currentVideoIndex = null;
 
     function App(videos, createFirstVideo) {
+      var item, path, slug, _i, _len;
       if (createFirstVideo == null) {
         createFirstVideo = true;
       }
       this.videos = this.shuffleArray(videos);
       if (createFirstVideo) {
-        this.createVideo(0);
+        path = window.location.pathname.split('/');
+        if (path.indexOf('videos') >= 0) {
+          slug = path[path.indexOf('videos') + 1];
+          for (_i = 0, _len = videos.length; _i < _len; _i++) {
+            item = videos[_i];
+            if (item.slug === slug) {
+              this.createVideo(videos.indexOf(item));
+            }
+          }
+        } else {
+          this.createVideo(0);
+        }
       }
       this.attachEvents();
     }

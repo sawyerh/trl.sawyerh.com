@@ -1,8 +1,8 @@
 (function() {
   window.onYouTubeIframeAPIReady = function() {
     var app;
-    app = new App(videos);
-    return console.log('onYouTubeIframeAPIReady');
+    console.log('onYouTubeIframeAPIReady');
+    return app = new App(videos);
   };
 
 }).call(this);

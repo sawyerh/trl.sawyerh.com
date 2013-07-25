@@ -1,3 +1,3 @@
 window.onYouTubeIframeAPIReady = ->
-  app = new App(videos)
   console.log('onYouTubeIframeAPIReady')
+  app = new App(videos)

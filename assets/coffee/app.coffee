@@ -8,7 +8,17 @@ class window.App
     @videos = @shuffleArray(videos)
 
     if createFirstVideo
-      @createVideo(0)
+      path = window.location.pathname.split('/')
+      if path.indexOf('videos') >= 0
+        slug = path[path.indexOf('videos') + 1]
+
+        for item in videos
+          if item.slug == slug
+            @createVideo(videos.indexOf(item))
+
+
+      else
+        @createVideo(0)
     
     @attachEvents()
 
