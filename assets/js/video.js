@@ -19,6 +19,7 @@
     function Video(video, isMuted) {
       this.video = video;
       this.vimeoMessageReceived = __bind(this.vimeoMessageReceived, this);
+      this.youtubeStateChange = __bind(this.youtubeStateChange, this);
       this.setVolume = __bind(this.setVolume, this);
       this.embed = __bind(this.embed, this);
       muted = isMuted;

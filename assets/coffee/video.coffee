@@ -86,7 +86,7 @@ class window.Video
     player.setVolume if muted then 0 else 100
 
 
-  youtubeStateChange: (e) ->
+  youtubeStateChange: (e) =>
     @videoEnded() if e.data is YT.PlayerState.ENDED
 
 
