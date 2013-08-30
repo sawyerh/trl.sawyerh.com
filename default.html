@@ -13,22 +13,14 @@
   <div id="player" class="is-loading player"></div>
   <a href="http://siteleaf.com" target="_blank" class="siteleaf">Powered by Siteleaf</a>
 
-  <script>
-    var videos = [];
-    {% for post in site.posts %}
-      videos.push({
-        url: "{{post.url}}",
-        slug: "{{post.slug}}",
-        {% if post.meta.youtube_id and post.meta.youtube_id.value != empty %}youtube: "{{post.meta.youtube_id}}"{% else if post.meta.vimeo_id %}vimeo: "{{post.meta.vimeo_id}}"{% endif %}
-      });
-    {% endfor %}
-  </script>
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/videos.js"></script>
   <script src="/assets/_/js/application.js"></script>
   <script src="//www.youtube.com/iframe_api"></script>
-  <!--<script src="/assets/js/video.js"></script> 
+  {% comment %}
+  <script src="/assets/js/video.js"></script> 
   <script src="/assets/js/app.js"></script> 
-  <script src="/assets/js/script.js"></script> -->
+  <script src="/assets/js/script.js"></script>
+  {% endcomment %}
 </body>
 </html>

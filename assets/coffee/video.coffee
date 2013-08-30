@@ -18,6 +18,8 @@ class window.Video
       videoId = @video.vimeo
       provider = "vimeo"
 
+    document.title = @video.title
+
     @embed()
     # @updateURL()
 

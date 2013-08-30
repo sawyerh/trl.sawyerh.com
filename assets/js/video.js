@@ -30,6 +30,7 @@
         videoId = this.video.vimeo;
         provider = "vimeo";
       }
+      document.title = this.video.title;
       this.embed();
     }
 
