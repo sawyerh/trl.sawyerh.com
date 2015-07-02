@@ -11,32 +11,55 @@ class window.App
       path = window.location.pathname.split('/')
       if path.indexOf('videos') >= 0
         slug = path[path.indexOf('videos') + 1]
-
-        for item in videos
-          if item.slug == slug
-            @createVideo(videos.indexOf(item))
-
-
+        @createVideo(@getVideoIndexBySlug(slug))
+        @hideVideos()
       else
         @createVideo(0)
-    
+
     @attachEvents()
 
 
+  getVideoIndexBySlug: (slug) ->
+    for item in @videos
+      if item.slug == slug
+        return @videos.indexOf(item)
+
+
   attachEvents: ->
+    self = @
+
     $(window).on "videoEnded", =>
       @videoEnded()
+
+    $(document).on 'click', '.video-link', (e) ->
+      e.preventDefault()
+      slug = this.getAttribute('data-slug')
+      index = self.getVideoIndexBySlug(slug)
+      self.createVideo(index, true)
+      self.hideVideos()
 
     $("#js-mute").on "click", ->
       currentVideo.toggleMute()
       muted = !muted
       @classList.toggle "is-muted"
 
+    $('.hide-videos').on 'click', ->
+      self.hideVideos()
 
-  createVideo: (i) ->
-    console.log videos[i]
+    $('.show-videos').on 'click', ->
+      document.body.classList.remove('is-hiding-menu')
+      document.body.classList.remove('is-showing-info')
+
+    $('.show-info').on 'click', ->
+      document.body.classList.toggle('is-showing-info')
+
+  hideVideos: ->
+    document.body.classList.add('is-hiding-menu')
+
+
+  createVideo: (i, setUrl = false) ->
     currentVideo.destroy()  if currentVideo
-    currentVideo = new Video(videos[i], muted)
+    currentVideo = new Video(videos[i], muted, setUrl)
     currentVideoIndex = i
 
 

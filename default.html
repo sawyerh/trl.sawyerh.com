@@ -1,22 +1,29 @@
 {% capture content %}
-  {% if type == 'page' %}
-    <section class="videos">
-      {% for video in posts %}
-        <a href="{{ video.url }}" class="video">
-          {% for artist in video.taxonomy['Artist'] %}
-            <span class="artist">{{ artist.value }}</span>
-          {% endfor %}
+  <section class="videos">
+    <span class="hide-videos ss-icon">close</span>
 
-          <span class="title">{{ video.title }}</span>
-          {% comment %}http://img.youtube.com/vi/{{ video.meta.youtube_id }}/mqdefault.jpg{% endcomment %}
-        </a>
-      {% endfor %}
-    </section>
-  {% endif %}
+    {% for video in site.pages.videos.posts %}
+      <a href="{{ video.url }}" class="video-link" data-slug="{{ video.slug }}">
+        {% for artist in video.taxonomy['Artist'] %}
+          <span class="artist">{{ artist.value }}</span>
+        {% endfor %}
 
-  <div class="mute" id="js-mute"></div>
+        <span class="title">{{ video.title }}</span>
+        {% comment %}<img src="http://img.youtube.com/vi/{{ video.meta.youtube_id }}/mqdefault.jpg" />{% endcomment %}
+      </a>
+    {% endfor %}
+  </section>
+
+  {% comment %}<div class="mute" id="js-mute"></div>{% endcomment %}
+  <div class="video-info">
+    <h1 class="video-title">Baby Blue</h1>
+    <h2 class="video-artist">Action Bronson</h2>
+    <span class="video-url ss-link">listenand.watch/videos/<span class="video-slug"></span></span>
+  </div>
+
   <div id="player" class="is-loading player"></div>
-  <a href="http://siteleaf.com" target="_blank" class="siteleaf">Powered by Siteleaf</a>
+  <span class="show-info ss-icon" title="Video info">info</span>
+  <span class="show-videos ss-icon" title="Browse videos">list</span>
 {% endcapture %}
 
 {% capture footer_scripts %}

@@ -4,6 +4,7 @@ var videos = [
       title: "{{post.title}}",
       url: "{{post.url}}",
       slug: "{{post.slug}}",
+      artist: "{% for artist in post.taxonomy['Artist'] %}{{ artist.value }}{% unless forloop.last %}, {% endunless %}{% endfor %}",
       {% if post.meta.youtube_id and post.meta.youtube_id.value != empty %}youtube: "{{post.meta.youtube_id}}"{% else if post.meta.vimeo_id %}vimeo: "{{post.meta.vimeo_id}}"{% endif %}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}

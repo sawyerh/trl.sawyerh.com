@@ -16,8 +16,11 @@
 
     playerElement = document.getElementById('player');
 
-    function Video(video, isMuted) {
+    function Video(video, isMuted, setUrl) {
       this.video = video;
+      if (setUrl == null) {
+        setUrl = false;
+      }
       this.vimeoMessageReceived = __bind(this.vimeoMessageReceived, this);
       this.youtubeStateChange = __bind(this.youtubeStateChange, this);
       this.setVolume = __bind(this.setVolume, this);
@@ -31,7 +34,11 @@
         provider = "vimeo";
       }
       document.title = this.video.title;
+      this.info();
       this.embed();
+      if (setUrl) {
+        this.updateURL();
+      }
     }
 
     Video.prototype.toggleMute = function() {
@@ -42,6 +49,16 @@
       if (provider === "youtube") {
         return player.destroy();
       }
+    };
+
+    Video.prototype.info = function() {
+      var artist, slug, title;
+      title = document.querySelector('.video-title');
+      artist = document.querySelector('.video-artist');
+      slug = document.querySelector('.video-slug');
+      title.innerHTML = this.video.title;
+      artist.innerHTML = this.video.artist;
+      return slug.innerHTML = this.video.slug;
     };
 
     Video.prototype.embed = function() {

@@ -9,7 +9,7 @@
     currentVideoIndex = null;
 
     function App(videos, createFirstVideo) {
-      var item, path, slug, _i, _len;
+      var path, slug;
       if (createFirstVideo == null) {
         createFirstVideo = true;
       }
@@ -18,12 +18,8 @@
         path = window.location.pathname.split('/');
         if (path.indexOf('videos') >= 0) {
           slug = path[path.indexOf('videos') + 1];
-          for (_i = 0, _len = videos.length; _i < _len; _i++) {
-            item = videos[_i];
-            if (item.slug === slug) {
-              this.createVideo(videos.indexOf(item));
-            }
-          }
+          this.createVideo(this.getVideoIndexBySlug(slug));
+          this.hideVideos();
         } else {
           this.createVideo(0);
         }
@@ -31,24 +27,61 @@
       this.attachEvents();
     }
 
+    App.prototype.getVideoIndexBySlug = function(slug) {
+      var item, _i, _len, _ref;
+      _ref = this.videos;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        item = _ref[_i];
+        if (item.slug === slug) {
+          return this.videos.indexOf(item);
+        }
+      }
+    };
+
     App.prototype.attachEvents = function() {
-      var _this = this;
+      var self,
+        _this = this;
+      self = this;
       $(window).on("videoEnded", function() {
         return _this.videoEnded();
       });
-      return $("#js-mute").on("click", function() {
+      $(document).on('click', '.video-link', function(e) {
+        var index, slug;
+        e.preventDefault();
+        slug = this.getAttribute('data-slug');
+        index = self.getVideoIndexBySlug(slug);
+        self.createVideo(index, true);
+        return self.hideVideos();
+      });
+      $("#js-mute").on("click", function() {
         currentVideo.toggleMute();
         muted = !muted;
         return this.classList.toggle("is-muted");
       });
+      $('.hide-videos').on('click', function() {
+        return self.hideVideos();
+      });
+      $('.show-videos').on('click', function() {
+        document.body.classList.remove('is-hiding-menu');
+        return document.body.classList.remove('is-showing-info');
+      });
+      return $('.show-info').on('click', function() {
+        return document.body.classList.toggle('is-showing-info');
+      });
     };
 
-    App.prototype.createVideo = function(i) {
-      console.log(videos[i]);
+    App.prototype.hideVideos = function() {
+      return document.body.classList.add('is-hiding-menu');
+    };
+
+    App.prototype.createVideo = function(i, setUrl) {
+      if (setUrl == null) {
+        setUrl = false;
+      }
       if (currentVideo) {
         currentVideo.destroy();
       }
-      currentVideo = new Video(videos[i], muted);
+      currentVideo = new Video(videos[i], muted, setUrl);
       return currentVideoIndex = i;
     };
 

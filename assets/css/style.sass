@@ -1,10 +1,19 @@
 @import 'toolbox'
 
+$red: #ff003c
+$blue: #0024ff
+$yellow: #fff600
+
+*
+  +box-sizing(border-box)
+
 body
-  font-family: Helvetica, Arial, sans-serif
+  font-family: "ff-basic-gothic-web-pro"
+  font-size: 110px
+  font-weight: 900
+  text-align: center
   background: #000
   color: #fff
-  font-size: 12px
   margin: 0
   padding: 0
 
@@ -18,8 +27,6 @@ body
 
 
 .player
-  pointer-events: none
-
   &.is-loading
     background: url(/assets/images/loader.gif) center center no-repeat
 
@@ -53,11 +60,42 @@ body
   &:hover
     color: rgba(#fff, 0.8)
 
-.videos
-  font-family: "ff-basic-gothic-web-pro" //, "azo-sans-uber", "Impact", sans-serif
-  font-size: 110px
-  font-weight: 900
+.ss-icon
+  background: #fff
+  color: #000
+  font-size: 24px
+  width: 50px
+  height: 50px
+  line-height: 50px
+  display: inline-block
+  border-radius: 50%
   text-align: center
+  position: fixed
+  top: 20px
+  right: 20px
+  cursor: pointer
+  z-index: 4
+
+  &:hover
+    background: $red
+    color: #fff
+    box-shadow: 5px 5px 0 #fff
+
+.show-videos, .show-info
+  display: none
+  font-size: 16px
+  height: 40px
+  width: 40px
+  line-height: 40px
+  background: rgba(#fff, 0.5)
+
+  &:hover
+    background: $blue
+
+.show-info
+  right: 20px + 10px + 40px
+
+.videos
   position: relative
   z-index: 3
   background: rgba(#000, 0.35)
@@ -74,6 +112,13 @@ body
 
   +max-width(620px)
     font-size: 32px
+
+.is-hiding-menu
+  .show-videos, .show-info
+    display: inline-block
+
+  .videos
+    visibility: hidden
 
 +keyframes(linkHover)
   0%
@@ -100,19 +145,19 @@ body
   100%
     text-shadow: 5px 5px 0 #fff
 
-.video
+.video-link
   text-decoration: none
-  color: #ff003c
+  color: $red
   text-transform: uppercase
-  text-shadow: 4px 4px 0 #0024ff
+  text-shadow: 4px 4px 0 $blue
 
   &:nth-of-type(2n)
-    color: #0024ff
-    text-shadow: 4px 4px 0 #fff600
+    color: $blue
+    text-shadow: 4px 4px 0 $yellow
 
   &:nth-of-type(3n)
-    color: #fff600
-    text-shadow: 4px 4px 0 #ff003c
+    color: $yellow
+    text-shadow: 4px 4px 0 $red
 
   .artist
     font-weight: 200
@@ -123,3 +168,38 @@ body
   &:hover
     +animation(linkHover 300ms infinite)
 
+.video-info
+  +transform(translateY(-50%))
+  position: fixed
+  top: 50%
+  left: 0
+  right: 0
+  z-index: 4
+  font-size: 18px
+  display: none
+
+  h1, h2
+    margin: 0
+
+  h1
+    font-size: 90px
+    color: $yellow
+    text-shadow: 3px 3px 0 $red
+
+  h2
+    font-size: 48px
+    color: $red
+    text-shadow: 3px 3px 0 $blue
+    margin: 10px 0 20px
+
+.is-showing-info .video-info
+  display: block
+
+.video-url
+  font-size: 24px
+  text-shadow: 3px 3px 0 #000
+  font-weight: 200
+
+  &:before
+    margin-right: 10px
+    font-size: 85%

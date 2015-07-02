@@ -7,7 +7,7 @@ class window.Video
   playerElement = document.getElementById('player')
 
 
-  constructor: (@video, isMuted) ->
+  constructor: (@video, isMuted, setUrl = false) ->
     muted = isMuted
 
     # Set video info
@@ -20,8 +20,9 @@ class window.Video
 
     document.title = @video.title
 
+    @info()
     @embed()
-    # @updateURL()
+    @updateURL() if setUrl
 
 
   toggleMute: ->
@@ -34,9 +35,18 @@ class window.Video
 
   # private
   # ************************************
+  info: ->
+    title = document.querySelector('.video-title')
+    artist = document.querySelector('.video-artist')
+    slug = document.querySelector('.video-slug')
+
+    title.innerHTML = @video.title
+    artist.innerHTML = @video.artist
+    slug.innerHTML = @video.slug
+
   embed: =>
     playerElement.innerHTML = ""
-    
+
     if provider is "youtube"
       @createYoutube()
     else if provider is "vimeo"

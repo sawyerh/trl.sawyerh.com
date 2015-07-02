@@ -5,12 +5,13 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>{{site.title}}</title>
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+  <link href="//cdn.symbolset.com/9d1a29af1850bbff3cf748126c8941526e408bf7/symbolset.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/assets/_/css/style.css" />
 
   <script src="//use.typekit.net/uwo3cug.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
-<body>
+<body class="{% if type == 'post' %}is-hiding-menu{% endif %}">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
