@@ -9,7 +9,9 @@
         {% endfor %}
 
         <span class="title">{{ video.title }}</span>
-        {% comment %}<img src="http://img.youtube.com/vi/{{ video.meta.youtube_id }}/mqdefault.jpg" />{% endcomment %}
+        {% if video.meta.youtube_id and video.meta.youtube_id.value != empty %}
+          <img src="http://img.youtube.com/vi/{{ video.meta.youtube_id }}/mqdefault.jpg" height="100" />
+        {% endif %}
       </a>
     {% endfor %}
   </section>
