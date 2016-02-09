@@ -19,7 +19,11 @@
         dataType: 'JSON'
       }).done(function(data) {
         var path, slug;
-        self.videos = JSON.parse(data);
+        try {
+          self.videos = JSON.parse(data);
+        } catch (_error) {
+          self.videos = data;
+        }
         self.shuffledVideos = self.shuffleArray(self.videos.concat([]));
         if (createFirstVideo) {
           path = window.location.pathname.split('/');

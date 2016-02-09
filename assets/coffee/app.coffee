@@ -11,7 +11,11 @@ class window.App
       url: '/videos-data.js'
       dataType: 'JSON'
     }).done (data) ->
-      self.videos = JSON.parse(data)
+      try
+        self.videos = JSON.parse(data)
+      catch
+        self.videos = data
+
       self.shuffledVideos = self.shuffleArray(self.videos.concat([]))
 
       if createFirstVideo
