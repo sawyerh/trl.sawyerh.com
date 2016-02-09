@@ -1,19 +1,6 @@
 {% capture content %}
   <section class="videos">
     <span class="hide-videos ss-icon">close</span>
-
-    {% for video in site.pages.videos.posts %}
-      <a href="{{ video.url }}" class="video-link" data-slug="{{ video.slug }}">
-        {% for artist in video.taxonomy['Artist'] %}
-          <span class="artist">{{ artist.value }}</span>
-        {% endfor %}
-
-        <span class="title">{{ video.title }}</span>
-        {% if video.meta.youtube_id and video.meta.youtube_id.value != empty %}
-          <img src="http://img.youtube.com/vi/{{ video.meta.youtube_id }}/mqdefault.jpg" height="100" />
-        {% endif %}
-      </a>
-    {% endfor %}
   </section>
 
   {% comment %}<div class="mute" id="js-mute"></div>{% endcomment %}
@@ -29,14 +16,8 @@
 {% endcapture %}
 
 {% capture footer_scripts %}
-  <script src="/videos.js"></script>
-  <script src="/assets/_/js/application.js"></script>
-  <script src="//www.youtube.com/iframe_api"></script>
-  {% comment %}
-  <script src="/assets/js/video.js"></script>
-  <script src="/assets/js/app.js"></script>
-  <script src="/assets/js/script.js"></script>
-  {% endcomment %}
+  <script src="/assets/_/js/application.js" type="text/javascript"></script>
+  <script src="//www.youtube.com/iframe_api" type="text/javascript"></script>
 {% endcapture %}
 
 {% include 'layouts/default' %}

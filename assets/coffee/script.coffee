@@ -1,2 +1,2 @@
 window.onYouTubeIframeAPIReady = ->
-  app = new App(videos)
+  app = new App()

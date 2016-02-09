@@ -8,34 +8,75 @@
 
     currentVideoIndex = null;
 
-    function App(videos, createFirstVideo) {
-      var path, slug;
+    function App(createFirstVideo) {
+      var self;
       if (createFirstVideo == null) {
         createFirstVideo = true;
       }
-      this.videos = this.shuffleArray(videos);
-      if (createFirstVideo) {
-        path = window.location.pathname.split('/');
-        if (path.indexOf('videos') >= 0) {
-          slug = path[path.indexOf('videos') + 1];
-          this.createVideo(this.getVideoIndexBySlug(slug));
-          this.hideVideos();
-        } else {
-          this.createVideo(0);
+      self = this;
+      $.ajax({
+        url: '/videos-data.js',
+        dataType: 'JSON'
+      }).done(function(data) {
+        var path, slug;
+        self.videos = JSON.parse(data);
+        self.shuffledVideos = self.shuffleArray(self.videos.concat([]));
+        if (createFirstVideo) {
+          path = window.location.pathname.split('/');
+          if (path.indexOf('videos') >= 0) {
+            slug = path[path.indexOf('videos') + 1];
+            self.createVideo(self.getVideoIndexBySlug(slug));
+            self.hideVideos();
+          } else {
+            self.createVideo(0);
+          }
         }
-      }
-      this.attachEvents();
+        self.attachEvents();
+        return self.createNav();
+      });
     }
 
     App.prototype.getVideoIndexBySlug = function(slug) {
       var item, _i, _len, _ref;
-      _ref = this.videos;
+      _ref = this.shuffledVideos;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         item = _ref[_i];
         if (item.slug === slug) {
-          return this.videos.indexOf(item);
+          return this.shuffledVideos.indexOf(item);
         }
       }
+    };
+
+    App.prototype.createNav = function() {
+      var artist, frag, href, img, title, video, videosEl, _i, _len, _ref;
+      videosEl = document.querySelector('.videos');
+      frag = document.createDocumentFragment();
+      _ref = this.videos;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        video = _ref[_i];
+        href = document.createElement('a');
+        href.setAttribute('href', video.url);
+        href.setAttribute('data-slug', video.slug);
+        href.classList.add('video-link');
+        if (video.artist) {
+          artist = document.createElement('span');
+          artist.classList.add('artist');
+          artist.innerHTML = video.artist;
+          href.appendChild(artist);
+        }
+        title = document.createElement('span');
+        title.classList.add('title');
+        title.innerHTML = video.title;
+        href.appendChild(title);
+        if (video.youtube) {
+          img = document.createElement('img');
+          img.setAttribute('src', 'http://img.youtube.com/vi/' + video.youtube + '/mqdefault.jpg');
+          img.setAttribute('height', 100);
+          href.appendChild(img);
+        }
+        frag.appendChild(href);
+      }
+      return videosEl.appendChild(frag);
     };
 
     App.prototype.attachEvents = function() {
@@ -81,7 +122,7 @@
       if (currentVideo) {
         currentVideo.destroy();
       }
-      currentVideo = new Video(videos[i], muted, setUrl);
+      currentVideo = new Video(this.shuffledVideos[i], muted, setUrl);
       return currentVideoIndex = i;
     };
 
@@ -90,7 +131,7 @@
     };
 
     App.prototype.videoEnded = function() {
-      if (currentVideoIndex === videos.length - 1) {
+      if (currentVideoIndex === this.shuffledVideos.length - 1) {
         return this.createVideo(0);
       } else {
         return this.nextVideo();

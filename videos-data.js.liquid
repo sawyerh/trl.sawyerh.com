@@ -1,0 +1,9 @@
+{% capture videos_json %}{% for post in site.posts %}
+{
+  "title": {{post.title | json }},
+  "url": {{post.url | json }},
+  "slug": {{ post.slug | json }},
+  "artist": "{% for artist in post.taxonomy['Artist'] %}{{ artist.value }}{% unless forloop.last %}, {% endunless %}{% endfor %}",
+  {% if post.meta.youtube_id and post.meta.youtube_id.value != empty %}"youtube": "{{post.meta.youtube_id}}"{% else if post.meta.vimeo_id %}"vimeo": "{{post.meta.vimeo_id}}"{% endif %}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}{% endcapture %}[{{ videos_json | strip_newlines }}]

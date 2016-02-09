@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href='//cdn.symbolset.com' rel='dns-prefetch'>
+  <link href='//use.typekit.net' rel='dns-prefetch'>
+  <link href='//www.youtube.com' rel='dns-prefetch'>
+  <link href='http://player.vimeo.com/' rel='dns-prefetch'>
+  <link href='//ajax.googleapis.com' rel='dns-prefetch'>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>{{site.title}}</title>
+
+  {% if current.meta.youtube_id and current.meta.youtube_id.value != empty %}
+    <meta content="http://img.youtube.com/vi/{{ current.meta.youtube_id }}/0.jpg" name="og:image" />
+  {% endif %}
+
+  <title>{% if current.slug == '/' %}{{ site.title }}{% else %}{{ current.title }}{% for artist in current.taxonomy['Artist'] %} - {{ artist.value }}{% endfor %}{% endif %}</title>
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
   <link href="//cdn.symbolset.com/9d1a29af1850bbff3cf748126c8941526e408bf7/symbolset.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/assets/_/css/style.css" />

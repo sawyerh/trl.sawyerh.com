@@ -4,26 +4,65 @@ class window.App
   currentVideoIndex = null
 
 
-  constructor: (videos, createFirstVideo = true) ->
-    @videos = @shuffleArray(videos)
+  constructor: (createFirstVideo = true) ->
+    self = this
 
-    if createFirstVideo
-      path = window.location.pathname.split('/')
-      if path.indexOf('videos') >= 0
-        slug = path[path.indexOf('videos') + 1]
-        @createVideo(@getVideoIndexBySlug(slug))
-        @hideVideos()
-      else
-        @createVideo(0)
+    $.ajax({
+      url: '/videos-data.js'
+      dataType: 'JSON'
+    }).done (data) ->
+      self.videos = JSON.parse(data)
+      self.shuffledVideos = self.shuffleArray(self.videos.concat([]))
 
-    @attachEvents()
+      if createFirstVideo
+        path = window.location.pathname.split('/')
+        if path.indexOf('videos') >= 0
+          slug = path[path.indexOf('videos') + 1]
+          self.createVideo(self.getVideoIndexBySlug(slug))
+          self.hideVideos()
+        else
+          self.createVideo(0)
+
+      self.attachEvents()
+      self.createNav()
 
 
   getVideoIndexBySlug: (slug) ->
-    for item in @videos
+    for item in @shuffledVideos
       if item.slug == slug
-        return @videos.indexOf(item)
+        return @shuffledVideos.indexOf(item)
 
+
+  createNav: ->
+    videosEl = document.querySelector('.videos')
+    frag = document.createDocumentFragment()
+
+    for video in this.videos
+      href = document.createElement('a')
+      href.setAttribute('href', video.url)
+      href.setAttribute('data-slug', video.slug)
+      href.classList.add('video-link')
+
+      if video.artist
+        artist = document.createElement('span')
+        artist.classList.add('artist')
+        artist.innerHTML = video.artist
+        href.appendChild(artist)
+
+      title = document.createElement('span')
+      title.classList.add('title')
+      title.innerHTML = video.title
+      href.appendChild(title)
+
+      if video.youtube
+        img = document.createElement('img')
+        img.setAttribute('src', 'http://img.youtube.com/vi/' + video.youtube + '/mqdefault.jpg')
+        img.setAttribute('height', 100)
+        href.appendChild(img)
+
+      frag.appendChild(href)
+
+    videosEl.appendChild(frag)
 
   attachEvents: ->
     self = @
@@ -59,7 +98,7 @@ class window.App
 
   createVideo: (i, setUrl = false) ->
     currentVideo.destroy()  if currentVideo
-    currentVideo = new Video(videos[i], muted, setUrl)
+    currentVideo = new Video(this.shuffledVideos[i], muted, setUrl)
     currentVideoIndex = i
 
 
@@ -69,7 +108,7 @@ class window.App
 
   videoEnded: ->
     # Advance to next video
-    if currentVideoIndex is videos.length - 1
+    if currentVideoIndex is this.shuffledVideos.length - 1
       @createVideo 0
     else
       @nextVideo()
