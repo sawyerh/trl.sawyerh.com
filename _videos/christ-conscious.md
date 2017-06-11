@@ -1,6 +1,6 @@
 ---
 title: Christ Conscious
-position: 35
+position: 36
 artist: Joey Bada$$
 youtube: yRfQGXFRr30
 ---

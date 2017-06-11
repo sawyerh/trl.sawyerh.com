@@ -1,6 +1,6 @@
 ---
 title: All Day
-position: 48
+position: 49
 artist: Kanye West
 youtube: _ABk7TmjnVk
 ---

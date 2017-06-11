@@ -1,6 +1,6 @@
 ---
 title: Diamonds
-position: 68
+position: 69
 artist: Common, Big Sean
 youtube: nzqyeq7VOcg
 ---

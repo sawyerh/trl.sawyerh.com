@@ -1,6 +1,6 @@
 ---
 title: Power
-position: 189
+position: 190
 artist: Kanye West
 youtube: L53gjP-TtGE
 ---

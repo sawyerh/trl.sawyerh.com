@@ -1,6 +1,6 @@
 ---
 title: Flashing Lights
-position: 174
+position: 175
 artist: Kanye West
 youtube: ila-hAUXR5U
 ---

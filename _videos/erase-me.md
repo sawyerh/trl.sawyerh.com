@@ -1,6 +1,6 @@
 ---
 title: Erase Me
-position: 147
+position: 148
 artist: Kid Cudi, Kanye West
 youtube: ICaTsTkBPV8
 ---

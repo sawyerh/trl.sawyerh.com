@@ -1,6 +1,6 @@
 ---
 title: Alright
-position: 31
+position: 32
 artist: Kendrick Lamar
 youtube: Z-48u_uWMHY
 ---

@@ -1,6 +1,6 @@
 ---
 title: Look out for Detox
-position: 102
+position: 103
 artist: Kendrick Lamar
 youtube: B5eT6TaEtPI
 ---

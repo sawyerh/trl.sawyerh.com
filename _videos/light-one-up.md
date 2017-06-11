@@ -1,6 +1,6 @@
 ---
 title: Light One Up
-position: 118
+position: 119
 artist: Chip Tha Ripper
 vimeo: 20309774
 ---

@@ -1,6 +1,6 @@
 ---
 title: Ghost
-position: 9
+position: 10
 artist: Vince Staples
 youtube: XUnkvUDs-ow
 ---

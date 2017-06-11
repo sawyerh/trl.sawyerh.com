@@ -1,6 +1,6 @@
 ---
 title: Hard Knock Life
-position: 71
+position: 72
 artist: Jay Z
 youtube: 4ZTrfrpTrlw
 ---

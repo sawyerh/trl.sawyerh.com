@@ -1,6 +1,6 @@
 ---
 title: Maniac
-position: 145
+position: 146
 artist: Kid Cudi
 youtube: VREts9LCidA
 ---

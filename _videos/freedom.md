@@ -1,6 +1,6 @@
 ---
 title: Freedom
-position: 28
+position: 29
 artist: Pharrell
 youtube: LlY90lG_Fuw
 ---

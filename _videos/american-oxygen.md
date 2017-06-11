@@ -1,6 +1,6 @@
 ---
 title: American Oxygen
-position: 40
+position: 41
 artist: Rihanna
 youtube: Ao8cGLIMtvg
 ---
