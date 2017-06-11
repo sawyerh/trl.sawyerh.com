@@ -1,7 +1,7 @@
 ---
 title: Actin Crazy
-slug: actin-crazy
+position: 46
 artist: Action Bronson
 youtube: debIyWS6Byc
-position: 46
 ---
+

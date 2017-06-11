@@ -1,7 +1,7 @@
 ---
 title: Wet Dreamz
-slug: wet-dreamz
+position: 39
 artist: J Cole
 youtube: eCGV26aj-mM
-position: 39
 ---
+

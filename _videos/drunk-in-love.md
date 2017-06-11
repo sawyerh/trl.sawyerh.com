@@ -1,7 +1,7 @@
 ---
 title: Drunk In Love
-slug: drunk-in-love
+position: 105
 artist: Jay Z, Beyonce
 youtube: p1JPKLa-Ofc
-position: 105
 ---
+

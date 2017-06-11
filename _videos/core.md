@@ -1,7 +1,7 @@
 ---
 title: CORE
-slug: core
+position: 70
 artist: RL Grime
 youtube: 04ufimjXEbA
-position: 70
 ---
+

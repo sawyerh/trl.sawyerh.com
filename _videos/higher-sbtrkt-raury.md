@@ -1,7 +1,7 @@
 ---
 title: Higher
-slug: higher-sbtrkt-raury
+position: 60
 artist: Raury, SBTRKT
 youtube: 0LqBw6FNNng
-position: 60
 ---
+

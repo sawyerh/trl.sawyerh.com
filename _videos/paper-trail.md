@@ -1,7 +1,7 @@
 ---
 title: Paper Trail$
-slug: paper-trail
+position: 34
 artist: Joey Bada$$
 youtube: stoLqWXsIOY
-position: 34
 ---
+

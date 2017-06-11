@@ -1,7 +1,7 @@
 ---
 title: I Know
-slug: i-know
+position: 21
 artist: Big Sean, Jhene Aiko
 youtube: YWpTQM-CCTM
-position: 21
 ---
+

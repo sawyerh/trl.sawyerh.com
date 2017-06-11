@@ -1,7 +1,7 @@
 ---
 title: A Place Like This
-slug: a-place-like-this
+position: 22
 artist: Majid Jordan
 youtube: klgbYfu5MCQ
-position: 22
 ---
+

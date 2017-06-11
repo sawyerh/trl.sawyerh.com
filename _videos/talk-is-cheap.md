@@ -1,7 +1,7 @@
 ---
 title: Talk Is Cheap
-slug: talk-is-cheap
+position: 87
 artist: Chet Faker
 youtube: aP_-P_BS6KY
-position: 87
 ---
+

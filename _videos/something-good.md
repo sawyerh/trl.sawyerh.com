@@ -1,7 +1,7 @@
 ---
 title: Something Good
-slug: something-good
+position: 127
 artist: Alt-J
 youtube: aNYjOVo5IEw
-position: 127
 ---
+

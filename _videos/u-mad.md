@@ -1,7 +1,7 @@
 ---
 title: U Mad
-slug: u-mad
+position: 37
 artist: Kanye West, Vic Mensa
 youtube: fP8FMdVcCQQ
-position: 37
 ---
+

@@ -1,7 +1,7 @@
 ---
 title: King Wizard
-slug: king-wizard
+position: 148
 artist: Kid Cudi
 youtube: FmvU3urYQgI
-position: 148
 ---
+

@@ -1,7 +1,7 @@
 ---
 title: I Stand Alone
-slug: i-stand-alone
+position: 136
 artist: Theophilus London
 youtube: 2WRuDAasz-8
-position: 136
 ---
+

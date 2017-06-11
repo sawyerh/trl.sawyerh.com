@@ -1,7 +1,7 @@
 ---
 title: The Golden Age
-slug: the-golden-age
+position: 67
 artist: Woodkid
 youtube: RWMMdX6KYGM
-position: 67
 ---
+

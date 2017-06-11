@@ -1,7 +1,7 @@
 ---
-title: Bitch Better Have My Money 
-slug: bitch-better-have-my-money
+title: Bitch Better Have My Money
+position: 30
 artist: Rihanna
 youtube: B3eAMGXFw1o
-position: 30
 ---
+

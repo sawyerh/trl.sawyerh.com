@@ -1,7 +1,7 @@
 ---
 title: God is Gangsta
-slug: god-is-gangsta
+position: 13
 artist: Kendrick Lamar
 vimeo: 150389574
-position: 13
 ---
+

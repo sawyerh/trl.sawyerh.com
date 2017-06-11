@@ -1,7 +1,7 @@
 ---
 title: Freedom
-slug: freedom
+position: 28
 artist: Pharrell
 youtube: LlY90lG_Fuw
-position: 28
 ---
+

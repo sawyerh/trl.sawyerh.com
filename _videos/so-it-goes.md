@@ -1,7 +1,7 @@
 ---
 title: So It Goes
-slug: so-it-goes
+position: 61
 artist: Ratking
 youtube: Yzdb4gEaF6E
-position: 61
 ---
+

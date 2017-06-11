@@ -1,7 +1,7 @@
 ---
 title: King Push
-slug: king-push
+position: 114
 artist: Pusha T
 vimeo: 75602188
-position: 114
 ---
+

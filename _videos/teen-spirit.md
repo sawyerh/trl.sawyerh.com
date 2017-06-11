@@ -1,7 +1,7 @@
 ---
 title: Teen Spirit
-slug: teen-spirit
+position: 104
 artist: 50 Cent, SZA
 youtube: TKZAaugca6A
-position: 104
 ---
+

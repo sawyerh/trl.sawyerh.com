@@ -1,7 +1,7 @@
 ---
 title: Lift Me Up
-slug: lift-me-up
+position: 15
 artist: Vince Staples
 youtube: bn15IvVrprw
-position: 15
 ---
+

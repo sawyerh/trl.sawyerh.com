@@ -1,7 +1,7 @@
 ---
 title: Look out for Detox
-slug: look-out-for-detox
+position: 102
 artist: Kendrick Lamar
 youtube: B5eT6TaEtPI
-position: 102
 ---
+

@@ -1,7 +1,7 @@
 ---
 title: I Mean It
-slug: i-mean-it
+position: 80
 artist: G-Eazy
 youtube: CxnaPa8ohmM
-position: 80
 ---
+

@@ -1,7 +1,7 @@
 ---
 title: Like Me
-slug: like-me
+position: 45
 artist: Joey Bada$$
 youtube: Nr_Gzz6ZRaE
-position: 45
 ---
+

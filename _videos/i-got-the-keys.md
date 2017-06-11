@@ -1,7 +1,7 @@
 ---
 title: I Got the Keys
-slug: i-got-the-keys
+position: 10
 artist: Jay Z
 youtube: SFLSOIufuhM
-position: 10
 ---
+

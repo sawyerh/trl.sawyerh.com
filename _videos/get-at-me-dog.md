@@ -1,7 +1,7 @@
 ---
 title: Get At Me Dog
-slug: get-at-me-dog
+position: 24
 artist: DMX
 youtube: ojT46NDou-M
-position: 24
 ---
+

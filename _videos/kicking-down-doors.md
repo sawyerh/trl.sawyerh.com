@@ -1,7 +1,7 @@
 ---
 title: Kicking Down Doors
-slug: kicking-down-doors
+position: 73
 artist: Santigold
 youtube: DV8TSSiZa2E
-position: 73
 ---
+

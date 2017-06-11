@@ -1,7 +1,7 @@
 ---
 title: I Never Learn
-slug: i-never-learn
+position: 85
 artist: Lykke Li
 youtube: 5SrEdAeGj6Y
-position: 85
 ---
+

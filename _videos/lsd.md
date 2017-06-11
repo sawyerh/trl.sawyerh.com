@@ -1,7 +1,7 @@
 ---
 title: LSD
-slug: lsd
+position: 38
 artist: A$AP Rocky
 youtube: yEG2VTHS9yg
-position: 38
 ---
+

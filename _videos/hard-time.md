@@ -1,7 +1,7 @@
 ---
 title: Hard Time
-slug: hard-time
+position: 78
 artist: Seinabo Sey
 youtube: EgdOs5-3VWQ
-position: 78
 ---
+

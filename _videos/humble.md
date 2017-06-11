@@ -1,7 +1,7 @@
 ---
 title: Humble
-slug: humble
+position: 4
 artist: Kendrick Lamar
 youtube: tvTRZJ-4EyI
-position: 4
 ---
+

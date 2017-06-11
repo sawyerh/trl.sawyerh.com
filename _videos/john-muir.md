@@ -1,7 +1,7 @@
 ---
 title: JoHn Muir
-slug: john-muir
+position: 11
 artist: Schoolboy Q
 youtube: gcV3jIqKznc
-position: 11
 ---
+

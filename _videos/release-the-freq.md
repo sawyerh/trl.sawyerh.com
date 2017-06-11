@@ -1,7 +1,7 @@
 ---
 title: Release The Freq
-slug: release-the-freq
+position: 183
 artist: Matta
 vimeo: 20800127
-position: 183
 ---
+

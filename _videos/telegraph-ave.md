@@ -1,7 +1,7 @@
 ---
 title: Telegraph Ave
-slug: telegraph-ave
+position: 54
 artist: Childish Gambino
 youtube: p3f-eDzkxcw
-position: 54
 ---
+

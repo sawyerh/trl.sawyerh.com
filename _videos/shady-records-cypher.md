@@ -1,7 +1,7 @@
 ---
 title: Shady Records Cypher
-slug: shady-records-cypher
+position: 185
 artist: Eminem, Yelawolf, Slaughterhouse
 vimeo: 30509290
-position: 185
 ---
+

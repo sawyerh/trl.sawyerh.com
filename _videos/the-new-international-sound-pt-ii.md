@@ -1,7 +1,7 @@
 ---
-title: The New International Sound Pt. II 
-slug: the-new-international-sound-pt-ii
+title: The New International Sound Pt. II
+position: 36
 artist: M.I.A., Gener8ion
 youtube: uAYPacrJnyQ
-position: 36
 ---
+

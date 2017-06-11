@@ -1,7 +1,7 @@
 ---
 title: Ghost
-slug: ghost
+position: 9
 artist: Vince Staples
 youtube: XUnkvUDs-ow
-position: 9
 ---
+
