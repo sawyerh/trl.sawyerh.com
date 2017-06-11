@@ -1,7 +1,7 @@
 ---
 title: One of those nights
-slug: one-of-those-nights
+position: 120
 artist: Juicy J, Weeknd
 youtube: VP7GNxLI9fM
-position: 120
 ---
+

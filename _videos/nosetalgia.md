@@ -1,7 +1,7 @@
 ---
 title: Nosetalgia
-slug: nosetalgia
+position: 96
 artist: Pusha T, Kendrick Lamar
 youtube: u-2ckLBV21g
-position: 96
 ---
+

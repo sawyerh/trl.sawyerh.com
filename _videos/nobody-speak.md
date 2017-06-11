@@ -1,7 +1,7 @@
 ---
 title: Nobody Speak
-slug: nobody-speak
+position: 8
 artist: Run The Jewels, DJ Shadow
 vimeo: 180016993
-position: 8
 ---
+

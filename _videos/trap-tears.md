@@ -1,7 +1,7 @@
 ---
 title: Trap Tears
-slug: trap-tears
+position: 18
 artist: Raury
 youtube: ynmCgpaArOc
-position: 18
 ---
+

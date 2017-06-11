@@ -1,7 +1,7 @@
 ---
 title: i
-slug: i
+position: 56
 artist: Kendrick Lamar
 youtube: 8aShfolR6w8
-position: 56
 ---
+

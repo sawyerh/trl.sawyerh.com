@@ -1,7 +1,7 @@
 ---
 title: Sober
-slug: sober
+position: 52
 artist: Childish Gambino
 youtube: jx96Twg-Aew
-position: 52
 ---
+

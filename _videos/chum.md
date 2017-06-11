@@ -1,7 +1,7 @@
 ---
 title: Chum
-slug: chum
+position: 149
 artist: Earl Sweathsirt
 youtube: FCbWLSZrZfw
-position: 149
 ---
+

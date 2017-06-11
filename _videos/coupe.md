@@ -1,7 +1,7 @@
 ---
 title: Coupe
-slug: coupe
+position: 64
 artist: Future
 youtube: MNwQeiK1O9Y
-position: 64
 ---
+

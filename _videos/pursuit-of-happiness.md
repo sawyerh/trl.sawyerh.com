@@ -1,7 +1,7 @@
 ---
 title: Pursuit of Happiness
-slug: pursuit-of-happiness
+position: 166
 artist: Kid Cudi
 youtube: 3Z_Ys3BO_4M
-position: 166
 ---
+

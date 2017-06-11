@@ -1,7 +1,7 @@
 ---
 title: Take Care
-slug: take-care
+position: 184
 artist: Drake, Rihanna
 vimeo: 39762226
-position: 184
 ---
+

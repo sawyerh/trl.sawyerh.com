@@ -1,7 +1,7 @@
 ---
 title: Dope Song
-slug: dope-song
+position: 94
 artist: Danny Brown
 youtube: VZHks316GBw
-position: 94
 ---
+

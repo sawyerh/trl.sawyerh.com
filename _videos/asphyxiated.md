@@ -1,7 +1,7 @@
 ---
 title: Asphyxiated
-slug: asphyxiated
+position: 110
 artist: Moors
 youtube: wPyL09nzOjc
-position: 110
 ---
+

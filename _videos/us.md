@@ -1,7 +1,7 @@
 ---
 title: Us
-slug: us
+position: 66
 artist: Movement
 vimeo: 89475836
-position: 66
 ---
+

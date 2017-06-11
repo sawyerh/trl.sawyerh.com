@@ -1,7 +1,7 @@
 ---
 title: Sunlight
-slug: sunlight
+position: 133
 artist: Bag Raiders
 vimeo: 18020585
-position: 133
 ---
+

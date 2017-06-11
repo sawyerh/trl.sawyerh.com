@@ -1,7 +1,7 @@
 ---
 title: Locket
-slug: locket
+position: 62
 artist: Kilo Kish
 youtube: N385ebYi3Sw
-position: 62
 ---
+

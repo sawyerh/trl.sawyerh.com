@@ -1,7 +1,7 @@
 ---
 title: Own Man
-slug: own-man
+position: 77
 artist: Alex Wiley
 youtube: DogHe8aUKqk
-position: 77
 ---
+

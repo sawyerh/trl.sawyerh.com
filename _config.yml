@@ -1,8 +1,13 @@
 ---
 title: Listen and Watch
-url: http://listenand.watch
 timezone: America/New_York
 collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
   videos:
     title: Videos
     output: true
@@ -11,9 +16,10 @@ defaults:
     path: ''
     type: videos
   values:
-    youtube:
-    artist:
+    youtube: 
+    artist: 
     layout: default
+url: http://listenand.watch
 permalink: pretty
 exclude:
 - "*.config"

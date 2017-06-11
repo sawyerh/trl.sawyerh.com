@@ -1,7 +1,7 @@
 ---
 title: Swimming Pools
-slug: swimming-pools
+position: 173
 artist: Kendrick Lamar
 vimeo: 46933975
-position: 173
 ---
+

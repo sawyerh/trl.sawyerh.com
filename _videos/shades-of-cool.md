@@ -1,7 +1,7 @@
 ---
 title: Shades of Cool
-slug: shades-of-cool
+position: 75
 artist: Lana Del Rey
 youtube: rJABBmAMXnY
-position: 75
 ---
+

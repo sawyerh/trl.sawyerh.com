@@ -1,7 +1,7 @@
 ---
 title: Tell Your Friends
-slug: tell-your-friends
+position: 20
 artist: Weeknd
 youtube: j1ngEIxopUU
-position: 20
 ---
+

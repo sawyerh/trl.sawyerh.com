@@ -1,7 +1,7 @@
 ---
 title: Big Dusty
-slug: big-dusty
+position: 33
 artist: Joey Bada$$
 youtube: JmC2igVQdxc
-position: 33
 ---
+

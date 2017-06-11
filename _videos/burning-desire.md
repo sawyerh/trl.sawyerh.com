@@ -1,7 +1,7 @@
 ---
 title: Burning Desire
-slug: burning-desire
+position: 165
 artist: Lana Del Rey
 youtube: BGhIEkfby1M
-position: 165
 ---
+

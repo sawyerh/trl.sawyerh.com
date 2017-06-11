@@ -1,7 +1,7 @@
 ---
 title: A Lizard State
-slug: a-lizard-state
+position: 106
 artist: King Krule
 youtube: kpkr79srKTE
-position: 106
 ---
+

@@ -1,7 +1,7 @@
 ---
 title: Baby Blue
-slug: baby-blue
+position: 42
 artist: Action Bronson, Chance the Rapper
 youtube: bVP_w1rQweE
-position: 42
 ---
+

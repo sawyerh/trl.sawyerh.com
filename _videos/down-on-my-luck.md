@@ -1,7 +1,7 @@
 ---
 title: Down On My Luck
-slug: down-on-my-luck
+position: 81
 artist: Vic Mensa
 youtube: 5jUGAVUwhRU
-position: 81
 ---
+

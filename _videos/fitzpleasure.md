@@ -1,7 +1,7 @@
 ---
 title: Fitzpleasure
-slug: fitzpleasure
+position: 129
 artist: Alt-J
 youtube: npvNPORFXpc
-position: 129
 ---
+

@@ -1,7 +1,7 @@
 ---
 title: Flashing Lights
-slug: flashing-lights
+position: 174
 artist: Kanye West
 youtube: ila-hAUXR5U
-position: 174
 ---
+

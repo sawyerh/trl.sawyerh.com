@@ -1,7 +1,7 @@
 ---
 title: Her
-slug: her
+position: 23
 artist: Majid Jordan
 youtube: xGl4MFuGg_U
-position: 23
 ---
+

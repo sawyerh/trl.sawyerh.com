@@ -1,7 +1,7 @@
 ---
 title: Life Round Here
-slug: life-round-here
+position: 112
 artist: James Blake, Chance the Rapper
 youtube: 5S6U_krabrk
-position: 112
 ---
+

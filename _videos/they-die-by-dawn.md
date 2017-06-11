@@ -1,7 +1,7 @@
 ---
 title: They Die By Dawn
-slug: they-die-by-dawn
+position: 130
 artist: The Bullitts, Jay Electronica
 youtube: HIYSY6F0br4
-position: 130
 ---
+

@@ -1,7 +1,7 @@
 ---
 title: Everyday Robots
-slug: everyday-robots
+position: 103
 artist: Damon Albarn
 youtube: rjbiUj-FD-o
-position: 103
 ---
+

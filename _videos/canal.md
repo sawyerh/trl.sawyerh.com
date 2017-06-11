@@ -1,7 +1,7 @@
 ---
 title: Canal
-slug: canal
+position: 92
 artist: Ratking
 youtube: uAWzCmkJqpc
-position: 92
 ---
+

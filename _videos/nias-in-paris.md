@@ -1,7 +1,7 @@
 ---
 title: Ni**as In Paris
-slug: nias-in-paris
+position: 190
 artist: Kanye West, Jay Z
 youtube: gG_dA32oH44
-position: 190
 ---
+

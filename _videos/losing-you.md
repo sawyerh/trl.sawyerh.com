@@ -1,7 +1,7 @@
 ---
 title: Losing You
-slug: losing-you
+position: 99
 artist: Solange
 youtube: Hy9W_mrY_Vk
-position: 99
 ---
+

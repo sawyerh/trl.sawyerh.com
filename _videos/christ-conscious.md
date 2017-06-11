@@ -1,7 +1,7 @@
 ---
 title: Christ Conscious
-slug: christ-conscious
+position: 35
 artist: Joey Bada$$
 youtube: yRfQGXFRr30
-position: 35
 ---
+

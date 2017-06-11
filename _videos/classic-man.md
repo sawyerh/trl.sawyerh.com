@@ -1,7 +1,7 @@
 ---
 title: Classic Man
-slug: classic-man
+position: 26
 artist: Jidenna, Kendrick Lamar
 youtube: URiDdlAS6ls
-position: 26
 ---
+

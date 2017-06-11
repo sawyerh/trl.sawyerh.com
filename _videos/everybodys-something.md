@@ -1,7 +1,7 @@
 ---
 title: Everybody's Something
-slug: everybodys-something
+position: 121
 artist: Chance the Rapper
 youtube: Gctf0n8b3F4
-position: 121
 ---
+

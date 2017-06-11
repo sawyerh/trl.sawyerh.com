@@ -1,7 +1,7 @@
 ---
 title: Sweatpants
-slug: sweatpants
+position: 91
 artist: Childish Gambino
 youtube: ExVtrghW5Y4
-position: 91
 ---
+

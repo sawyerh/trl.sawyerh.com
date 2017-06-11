@@ -1,7 +1,7 @@
 ---
 title: Worst Behavior
-slug: worst-behavior
+position: 109
 artist: Drake
 vimeo: 79018443
-position: 109
 ---
+

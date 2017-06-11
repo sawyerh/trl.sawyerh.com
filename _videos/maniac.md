@@ -1,7 +1,7 @@
 ---
 title: Maniac
-slug: maniac
+position: 145
 artist: Kid Cudi
 youtube: VREts9LCidA
-position: 145
 ---
+

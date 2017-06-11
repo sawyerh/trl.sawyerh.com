@@ -1,7 +1,7 @@
 ---
 title: JD
-slug: jd
+position: 14
 artist: A$AP Rocky
 youtube: oshbQnXLeP8
-position: 14
 ---
+

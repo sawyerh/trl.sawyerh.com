@@ -1,7 +1,7 @@
 ---
 title: For Free?
-slug: for-free
+position: 27
 artist: Kendrick Lamar
 youtube: _ZTYgq4EoRo
-position: 27
 ---
+

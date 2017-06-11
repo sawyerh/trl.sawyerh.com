@@ -1,7 +1,7 @@
 ---
 title: Energy
-slug: energy
+position: 19
 artist: Drake
 youtube: 7LnBvuzjpr4
-position: 19
 ---
+

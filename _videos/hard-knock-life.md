@@ -1,7 +1,7 @@
 ---
 title: Hard Knock Life
-slug: hard-knock-life
+position: 71
 artist: Jay Z
 youtube: 4ZTrfrpTrlw
-position: 71
 ---
+

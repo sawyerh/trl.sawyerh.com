@@ -1,7 +1,7 @@
 ---
 title: Jit/Juke
-slug: jit-juke
+position: 59
 artist: Big Sean
 youtube: ljweTcV0Ieo
-position: 59
 ---
+
