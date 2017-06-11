@@ -1,0 +1,27 @@
+---
+title: Listen and Watch
+url: http://listenand.watch
+timezone: America/New_York
+collections:
+  videos:
+    title: Videos
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: videos
+  values:
+    youtube:
+    artist:
+    layout: default
+permalink: pretty
+exclude:
+- "*.config"
+- assets/src
+- ".gitignore"
+- Gulpfile.js
+- node_modules
+- package.json
+- README*
+- tools/
+- webpack.config.js

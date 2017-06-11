@@ -1,5 +1,0 @@
-javascripts:
-  application:
-    - assets/js/video.js
-    - assets/js/app.js
-    - assets/js/script.js
